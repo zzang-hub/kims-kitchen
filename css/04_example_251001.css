@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+body {
+    /* background-color: bisque; */
+}
+
+/************** common : 공통으로 사용할 디자인  *******************************/
+
+
+/*************** reset : 초기화 시킴 *****************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    /* 현재 설정된 기본값을 그대로 쓰겠다!!! */
+    font-weight: normal;
+    /* 기본값 : 400 */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* float 해제를 위한 클래스 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+
+}
+
+
+
+/***새스타일 시작****************************************************************/
+
+.instargram {
+    width: 100%;
+    background-color: rgb(124, 81, 161);
+    padding: 100px 0;
+}
+
+
+
+.instargram .inbox {
+    /* width: 1280px; */
+    width:80%;
+    max-width: 1280px;
+    /* background-color: aquamarine; */
+    margin: 0 auto;
+
+}
+
+.instargram .title {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.instargram .content {
+    background-color: rgb(255, 100, 10);
+    /* position: relative; */
+    /* box-sizing: border-box; */
+}
+
+.instargram .content .thumb_list {}
+
+.instargram .content ul li {
+    float: left;
+    width: 16.66%;
+    
+    overflow: hidden;/* 넘치는양 없앰 */
+
+
+}
+
+.instargram .content ul li a {
+    display: block;
+}
+
+.instargram .content ul li a img {
+    width: 100%;
+    display: block;
+    transition: all 0.65s;
+
+    /* float:left; */
+    /* overflow: hidden; */
+
+
+}
+
+.instargram .button {
+    /*  background-color: tomato; */
+
+    text-align: center;
+    /* position: relative; */
+}
+
+.instargram .button a {
+    background-color: rgb(255, 106, 0);
+    padding: 10px 60px;
+    box-sizing: border-box;
+       line-height: 30px;
+     color: #fff;    
+    text-transform: uppercase;
+       
+    display: inline-block;
+
+        margin-top: 50px;
+    
+
+}
+
+
+
+
+/* hover */
+.instargram .content ul li:hover img {
+    /* li를 호버했을때 li가 아니라 그 안에 img를 선택 */
+    transform: scale(1.1);    /* 100이 1 */
+    /* 중심에서부터 확대됨 */
+    opacity: 0.5;
+}
+
+

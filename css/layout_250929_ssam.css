@@ -1,0 +1,172 @@
+@charset "UTF-8"
+
+body {
+    background-color: bisque;
+}
+
+/*************** reset : 초기화 시킴 ***********************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    /* 현재 설정된 기본값을 그대로 쓰겠다!!! */
+    font-weight: normal;
+    /* 기본값 : 400 */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.recipe {
+    background-color: rgb(255, 255, 255);
+    width: 1280px;
+    margin: 0 auto;
+}
+
+section{
+    width:100%;
+    background-color: #ffe4e4;
+    padding:100px auto;
+
+}
+.content .name {
+    display: block;
+}
+
+
+
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+.recipe {
+    /*   width: 90%; */
+    width: 1280px;
+
+    margin: 100px auto;
+   /*  outline: 1px solid red; */
+}
+
+.recipe .title {
+    /*   background-color: yellow; */
+    margin-bottom: 30px;
+}
+
+.recipe .title h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.recipe .title p {
+    font-size: 14px;
+    color: rgb(115, 115, 115);
+}
+
+.recipe .content {
+   /*  background-color: yellowgreen; */
+    /* outline: 1px solid red; */ 
+}
+/* float된 요소에 width 값이 설정되지 않았을경우, 내용만큼의 너비(width)를 갖는다!!!! */
+
+
+.recipe .content .box {
+  /*   outline: 1px solid blue; */
+    float: left;
+    
+   /* 1)전체 공간의 1/4로 설정
+    width: 25%;
+    padding: 0 20px;
+    box-sizing: border-box; */
+    
+    
+    /* 2)여백을 제외한 너비설정 */
+    width:23.5%;
+    /* margin-left: 2%;  여백크기*/
+
+    margin-bottom:20px;
+
+
+}
+
+.recipe .content .box ~ .box{/* 첫째 박스 빼고 둘째부터 마지막까지 선택(무조건!!!!) */
+    margin-left:2%;
+}
+
+
+
+.recipe .content .box:first-child{/* 첫째만 선택해 */
+    margin-left: 0;
+}
+.recipe .content .box:nth-child(4n+1){ 
+    margin-left: 0;
+}
+
+.recipe .content .box img {
+    background-color: brown;
+    width:100%;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    margin-bottom:10px
+
+
+}
+
+.recipe .content .box h3 {
+    font-size: 20px;
+    font-weight:600 ;
+    margin-bottom:6px;
+}
+
+.recipe .content .box h3 a {
+    color:#333;
+}
+.recipe .content .box h3 a:hover {
+    color:#ffacac;
+    text-decoration: underline;
+    color:tomato;
+}
+
+
+.recipe .content .box p {
+        color:
+        #9d9d9d;
+        /* font-size:17px; */
+}
+
+
+
+
+
+/************** common : 공통으로 사용할 디자인  **************************************************/
+
+/* float 해제를 위한 클래스 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+    
+    content:"";
+	display:block;
+	clear:both;
+}
+
+클래스 clear를 임의로 만들고 거기에 가상요소를 만든다는뜻

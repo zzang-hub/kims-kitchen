@@ -1,0 +1,199 @@
+@charset "UTF-8"
+
+body {
+    background-color: bisque;
+}
+
+/*************** reset : 초기화 시킴 ***********************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    /* 현재 설정된 기본값을 그대로 쓰겠다!!! */
+    font-weight: normal;
+    /* 기본값 : 400 */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/************** common : 공통으로 사용할 디자인  **************************************************/
+
+/* float 해제를 위한 클래스 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+
+}
+
+.content {
+    width: 90%;
+    max-width: 1720px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.content .title {
+    width: 100%;
+    height: 100px;
+    /*  background-color: rgb(24, 190, 88); */
+}
+
+
+.content .title .title_h {
+
+    height: 100px;
+    /* background-color: blue; */
+
+    /* outline: 1px solid rgb(95, 95, 95); */
+    position: relative;
+    display: inline;
+    left: 30px;
+    top: 40px;
+}
+
+.content .title_h h2 {
+    font-size: 30px;
+    font-weight: 700;
+    background-image: url("../img/example3/bul_tit.png");
+    width: 300px;
+    height: 150px;
+    background-repeat: no-repeat;
+    float: left;
+    margin-left: 50px;
+
+
+}
+
+.content .tap {
+    float: right;
+    height: 80px;
+    /*  background-color: blue; */
+    width: 450px;
+
+    /*  margin-right: 50px; */
+    padding-bottom: 0;
+    margin-top: 60px;
+
+}
+
+.content .tap li {
+    display: inline;
+    margin-left:20px;
+
+    /* background-color:red; */
+}
+
+.content .menu {
+    width: 90%;
+    background-color: aqua;
+   /*  outline: 1px solid red; */
+
+    margin-top: 100px;
+
+
+    /* left:100px; */
+    top: 50px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.content .menu .ar_left,
+.content .menu .ar_right {
+    position: absolute;
+  
+    z-index: 100;
+    /* background-color: rgb(214, 255, 131); */
+    width:50px;
+    height:50px;
+    overflow: hidden;
+
+    outline: 2px solid red;
+
+}
+
+.content .menu .btn {
+    width: 50px;
+    height: 50px;
+
+    outline: 2px solid blue;
+
+    background-image: url(../img/example3/icon_event_slider_arr.png);
+}
+
+.content .menu .ar_left {
+    position: absolute;
+    left: -60px;
+    top:100px;
+    /* background-color: yellowgreen; */
+    
+
+}
+.content .menu .ar_right {
+    position: absolute;
+  right:-60px;
+  top:100px;
+    /* background-color: yellowgreen; */
+
+    background-position: right top;
+   }
+
+   .content .menu .ar_right img {
+    margin-left: -50px;
+   }
+
+
+
+.content .menu ul {
+    position: absolute;
+
+}
+
+.content .menu li {
+
+    width: 23%;
+    float: left;
+    text-align: center;
+    /* outline: 1px solid red; */
+}
+
+.content .menu li~li {
+    margin-left: 2.6%;
+
+}
+
+
+.content .menu li img {
+    width: 100%;
+}
+
+.content .menu li .p1 {
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.content .menu li .p2 {
+    font-size: 14px;
+    color: rgb(76, 76, 76);
+    margin-top: 8px;
+
+}

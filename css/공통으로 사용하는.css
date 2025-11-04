@@ -1,0 +1,45 @@
+@charset "UTF-8"
+
+body {
+    background-color: bisque;
+}
+
+/*************** reset : 초기화 시킴 ***********************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    /* 현재 설정된 기본값을 그대로 쓰겠다!!! */
+    font-weight: normal;
+    /* 기본값 : 400 */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/************** common : 공통으로 사용할 디자인  **************************************************/
+
+/* float 해제를 위한 클래스 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+    
+}
+

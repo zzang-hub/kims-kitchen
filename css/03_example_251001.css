@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+/*** reset **********************************************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*** common (공통의 css) ****************************************************************************************/
+/* float해제를 위한 클래스와 가상요소! */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 
+구글 웹폰트
+
+1) Noto Sans Kr (font-weight: 100~900)
+font-family: "Noto Sans KR", sans-serif;
+
+2) Fredoka (font-weight: 300~700)
+font-family: "Fredoka", sans-serif;
+*/
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+.sandwich_menu {
+    width: 1200px;
+    margin: 60px auto;
+}
+
+
+.sandwich_menu .top {
+
+    margin-bottom: 40px;
+    /*  background-color: aqua;
+    outline: 1px solid red; */
+
+}
+
+.sandwich_menu .top .title {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+    font-size: 2.7em;
+    line-height: 60px;
+    background-image: url(../img/example3/bul_tit.png);
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    /* 이미지로부터 30px떨어져서 텍스트 시작 */
+    /* background-color: yellow; */
+    /* display: inline; */
+    /* 타이틀메뉴 자리가 블럭이니,,인라인으로 바꿔주기!!! */
+    float: left;
+}
+
+
+
+
+
+.sandwich_menu .top .tabmenu {
+    /* background-color: violet; */
+    float: right;
+
+
+
+}
+
+.sandwich_menu .top .tabmenu li {
+    display: inline-block;
+    line-height: 60px;
+    /* outline: 1px solid rgb(0, 255, 26); */
+
+    font-size: 0.8em;
+    color: slategrey;
+
+}
+
+.sandwich_menu .top .tabmenu li~li {
+    padding-left: 20px;
+}
+
+
+/* .sandwich_menu .top .tabmenu li a{
+    border-right: 1px solid red;
+    padding-right:15px; 보더로는 세로 사이즈 조절이 안됨..ㅠㅠ
+} */
+
+.sandwich_menu .top .tabmenu li a {
+    color: #838383;
+
+}
+
+.sandwich_menu .top .tabmenu li.active a {
+    color: green;
+    font-weight: 600;
+}
+
+.sandwich_menu .top .tabmenu li::after {
+    /* li가 시작되고 끝나기 전에 after가 생김 */
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: rgb(156, 156, 156);
+
+    position: absolute;
+    left: 8px;
+    top: 25px;
+    /* outline: 3px solid  rgb(255, 34, 9); */
+
+}
+
+.sandwich_menu .top .tabmenu li:first-child::after {
+    display: none;
+    ;
+}
+
+
+
+.sandwich_menu .top .tabmenu li {
+    position: relative;
+    /* 가상요소 after의 기준!!!을 설정 */
+}
+
+
+
+
+
+
+.sandwich_menu .content {
+
+   /*  outline: 1px solid red; */
+    position: relative;
+    /* btn의 기준 */
+}
+
+.sandwich_menu .content .btn {
+
+    /* background-color: aqua; */
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    /*  left: -70px;
+    top: 130px; */
+    /* 중앙좌표 잡기 :기준 내용의 크기 절반만큼 이동*/
+    top: 50%;
+    margin-top: -25px;
+    /* y축으로 위로 당김 */
+
+}
+
+.sandwich_menu .content .prev {}
+
+.sandwich_menu .content .btn::.prev {}
+
+
+.sandwich_menu .content .btn.prev {
+    left:-50px;
+}
+
+.sandwich_menu .content .btn.next {
+right:-50px;
+}
+
+
+
+.sandwich_menu .content .btn a {
+
+    /* background-color: rgb(251, 186, 89); */
+    display: block;
+    font-size: 0;
+    /*글자없애기*/
+    /*  text-indent: -9999px; */
+    /* 화면밖으로 사라지게 */
+    /* opacity: 0; */
+    height: 100%;
+    background-image: url(../img/example3/icon_event_slider_arr.png);
+    background-repeat: no-repeat;
+
+
+}
+
+
+.sandwich_menu .content .prev a {
+    background-position: left top;
+}
+
+.sandwich_menu .content .prev a:hover {
+    background-position: left bottom;
+}
+
+.sandwich_menu .content .next a {
+    background-position: right top;
+}
+
+.sandwich_menu .content .next a:hover {
+    background-position: right bottom;
+
+}
+
+
+
+
+
+
+.menu_wrap {
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.menu_wrap li {
+    width: 25%;
+    /* outline: tomato 1px solid; */
+
+    /* display: inline-block; */
+    /* 인라인은 한칸 공백땜에 안됨 쓸수없음!!! ==>float써야함 */
+    float: left;
+}
+
+.menu_wrap li a {
+    display: block;
+}
+
+.menu_wrap li a img {
+    width: 100%;
+}
+
+.menu_wrap li .info {
+    /* background-color: saddlebrown; */
+    padding: 15px;
+    text-align: center;
+
+}
+
+.menu_wrap li .info h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.menu_wrap li .info p {
+    color: rgb(105, 105, 105);
+    line-height: 1.4;
+    font-size: 16px;
+    letter-spacing: -0.6px;
+    margin-top: 10px;
+    word-break: keep-all;
+}

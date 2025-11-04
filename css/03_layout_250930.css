@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+/*************** reset : 초기화 시킴 ***********************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*  background-color: bisque; */
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    /* 현재 설정된 기본값을 그대로 쓰겠다!!! */
+    font-weight: normal;
+    /* 기본값 : 400 */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/************** common : 공통으로 사용할 디자인  **************************************************/
+
+/* float 해제를 위한 클래스 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.best_recipe {
+    background-color: rgb(255, 255, 255);
+    margin: 100px 0;
+}
+
+.best_recipe .title {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.best_recipe .title h2 {
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+
+.best_recipe .title p {
+    font-size: 1.5rem;
+    color: #777;
+    margin-top: 8px;
+}
+
+
+
+.best_recipe .content {
+    background-color: rgb(255, 255, 255);
+
+
+}
+
+/* 응용 */
+.best_recipe .content {
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+    max-width: 1920px;
+    margin: 0 auto;
+
+}
+
+.best_recipe .content ul {}
+
+.best_recipe .content .box {
+    /* outline: 3px solid red; */
+    float: left;
+    width: 18.4%;
+    overflow: hidden;
+    
+
+
+}
+
+.best_recipe .content .box~.box {
+    margin-left: 2%;
+}
+
+
+/* box의 border-radius 설정!! */
+.b1 {
+    border-radius: 0 130px 0 0;
+}
+
+.b2 {
+    border-radius: 0 0 0 130px;
+}
+
+.b3 {
+    border-radius: 0 0 0 130px;
+}
+
+.b4 {
+    border-radius: 130px 0 0 0;
+}
+
+.b5 {
+    border-radius: 0 130px 0 0;
+}
+
+
+
+.best_recipe .content .box a {
+    display: block;
+position: relative;
+}
+
+.best_recipe .content .box a::before {
+    /* 가상요소생성 */
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+    color:#fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;/* 기준공간을 만들어서 사이즈를 부여할 수 있음 */
+     z-index: 100px;
+   
+
+}
+
+
+.best_recipe .content .box a img {
+    width: 100%;
+    display: block;
+
+}
+
+.best_recipe .content .box a h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    left: 35px;
+    top: 60px;
+    color: rgb(255, 253, 240);
+
+}
